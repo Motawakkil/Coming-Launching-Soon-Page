@@ -1,0 +1,152 @@
+:root {
+  --main-color: #fd3267;
+  --secondry-color: #d12553;
+  --main-transition: 0.3s;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* Start Main-Component  */
+
+/* End Main-Component  */
+
+/* Start Main  */
+.page {
+  height: 100vh;
+  background-image: url("../imgs/Background-Image.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.page .icons {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.page .icons a {
+  color: white;
+  font-size: 20px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.page .icons a:hover {
+  color: var(--main-color);
+}
+.page h1 {
+  color: var(--main-color);
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 20px 0;
+}
+.page p {
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 30px 0;
+}
+.time {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time .unit span {
+  display: block;
+  color: var(--secondry-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.time .unit span.main {
+  color: white;
+  font-size: 70px;
+  padding-right: 8px;
+}
+.search {
+  margin: 40px auto;
+  width: 100%;
+}
+.search .main-input {
+  width: 60%;
+  padding: 10px;
+  margin-right: 15px;
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.search ::placeholder {
+  color: white;
+}
+.search .main-input:focus {
+  outline: none;
+}
+.search input[type="submit"] {
+  background-color: transparent;
+  border: 1px solid var(--secondry-color);
+  color: var(--secondry-color);
+  padding: 10px;
+  text-transform: uppercase;
+  transition: var(--main-transition);
+  cursor: pointer;
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+.search input[type="submit"]:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  transform-origin: left;
+}
+@media (max-width: 767px) {
+  .page h1 {
+    font-size: 45px;
+  }
+  .page p {
+    font-size: 25px;
+  }
+  .time .unit {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .search .main-input {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}
+/* End Main*/
